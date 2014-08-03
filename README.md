@@ -14,10 +14,11 @@ sh gradlew run
 ```
 
 After that visit these 2 urls
-[JSF Example http://localhost:8080/test.xhtml](http://localhost:8080/test.xhtml)
+
+JSF Example [http://localhost:8080/test.xhtml](http://localhost:8080/test.xhtml)
 
 and 
 
-[Spring MVC Greeting Service http://localhost:8080/greeting](http://localhost:8080/greeting)
+Spring MVC Greeting Service [http://localhost:8080/greeting](http://localhost:8080/greeting)
 
 There was a common belief that because JSF and Spring MVC were their own view techs that they could not be used together, but this is incorrect and is part of this example
