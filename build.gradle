@@ -28,7 +28,7 @@ repositories {
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     
-    compile group: "org.primefaces", name: "primefaces", version: "4.0"
+    compile group: "org.primefaces", name: "primefaces", version: "5.0"
 	compile group: "com.sun.faces", name: "jsf-api", version: "2.2.7"
 	compile group: "com.sun.faces", name: "jsf-impl", version: "2.2.7"
     compile group: 'javax.el', name: 'el-api', version: '1.0'

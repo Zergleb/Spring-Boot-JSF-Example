@@ -4,14 +4,14 @@
 		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
         http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 		id="WebApp_ID" version="3.0">
+	
+<!-- 	TODO put session timeout? where does JSF view scope grab it's timeout from? -->
 
+<!-- TODO How do I get rid of this web.xml because right now this is throwing a could
+not find backup factory exception when not adding this entry(Even thought it's a 
+different servlet name(It has a space)) -->
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>Faces Servlet</servlet-name>
-        <url-pattern>*.xhtml</url-pattern>
-    </servlet-mapping>
 </web-app>

@@ -3,12 +3,17 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:jsf="http://xmlns.jcp.org/jsf"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-            xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>User Page</title>
     </h:head>
     <h:body style="padding:20px">
-    	<h:outputLabel value="#{greetingController.monkey}"></h:outputLabel>
-    	<div>Hello World</div>
+    <h:form id="test">
+    	<h:outputLabel value="#{jsfController.jsfTestString}"></h:outputLabel>
+    	<p:commandButton value="Ajax Submit" id="ajax" update="@form" actionListener="#{jsfController.doSomething}" styleClass="ui-priority-primary" />
+    </h:form>
+    <div width="100%">
+        <p:chart type="line" model="#{jsfController.areaModel}" style="height:300px; width: 600px;" />
+    </div>
     </h:body>
 </html>
