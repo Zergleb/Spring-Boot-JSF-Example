@@ -13,12 +13,12 @@ Other:
 sh gradlew run
 ```
 
-After that visit these 2 links
+After that visit these 2 urls
 
-http://localhost:8080/test.xhtml //JSF page
+(http://localhost:8080/test.xhtml) //JSF page
 
 and 
 
-http://localhost:8080/greeting //Spring MVC Service
+(http://localhost:8080/greeting) //Spring MVC Service
 
 There was a common belief that because JSF and Spring MVC were their own view techs that they could not be used together, but this is incorrect and is part of this example
