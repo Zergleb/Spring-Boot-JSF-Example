@@ -1,0 +1,47 @@
+buildscript {
+    repositories {
+        maven { url "http://repo.spring.io/libs-release" }
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.4.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'gs-rest-service'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url "http://repo.spring.io/libs-release" }
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    
+    compile group: "org.primefaces", name: "primefaces", version: "4.0"
+	compile group: "com.sun.faces", name: "jsf-api", version: "2.2.7"
+	compile group: "com.sun.faces", name: "jsf-impl", version: "2.2.7"
+    compile group: 'javax.el', name: 'el-api', version: '1.0'
+    compile group: 'com.sun.el', name: 'el-ri', version: '1.0'
+    compile "javax.servlet.jsp:jsp-api:2.1"
+    
+    compile "org.apache.tomcat.embed:tomcat-embed-core:8.0.9"
+    compile "org.apache.tomcat.embed:tomcat-embed-logging-juli:7.0.54"
+    compile "org.apache.tomcat.embed:tomcat-embed-jasper:7.0.54"
+    
+    testCompile("junit:junit")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.11'
+}
