@@ -20,8 +20,6 @@ import com.sun.faces.config.ConfigureListener;
 
 @Configuration
 @EnableAutoConfiguration
-// (exclude = {WebMvcAutoConfiguration.class,
-// DispatcherServletAutoConfiguration.class})
 @ComponentScan
 public class Application {
 
@@ -35,6 +33,10 @@ public class Application {
 		return new ViewScope();
 	}
 
+	/**
+	 * Allows the use of @Scope("view") on Spring @Component, @Service and @Controller
+	 * beans
+	 */
 	@Bean
 	public static CustomScopeConfigurer scopeConfigurer() {
 		CustomScopeConfigurer configurer = new CustomScopeConfigurer();
@@ -44,6 +46,9 @@ public class Application {
 		return configurer;
 	}
 
+	/*
+	 * Below sets up the Faces Servlet for Spring Boot
+	 */
 	@Bean
 	public FacesServlet facesServlet() {
 		return new FacesServlet();

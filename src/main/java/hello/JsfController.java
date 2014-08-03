@@ -19,6 +19,13 @@ public class JsfController {
 
 	private String jsfTestString = "This string came from server side";
 
+	/**
+	 * This method demonstrates grabbing a vlue from the view scope and the
+	 * session scope.
+	 * 
+	 * Something I wanted to see to verify the same Spring context is managing
+	 * each scope.
+	 */
 	public void doSomething() {
 		setJsfTestString(testService.getMessage() + " " + counter++);
 	}
