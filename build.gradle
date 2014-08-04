@@ -14,11 +14,6 @@ apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
-jar {
-    baseName = 'gs-rest-service'
-    version =  '0.1.0'
-}
-
 repositories {
     mavenLocal()
     mavenCentral()
@@ -29,8 +24,8 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     
     compile group: "org.primefaces", name: "primefaces", version: "5.0"
-	compile group: "com.sun.faces", name: "jsf-api", version: "2.2.7"
-	compile group: "com.sun.faces", name: "jsf-impl", version: "2.2.7"
+    compile group: "com.sun.faces", name: "jsf-api", version: "2.2.7"
+    compile group: "com.sun.faces", name: "jsf-impl", version: "2.2.7"
     compile group: 'javax.el', name: 'el-api', version: '1.0'
     compile group: 'com.sun.el', name: 'el-ri', version: '1.0'
     compile "javax.servlet.jsp:jsp-api:2.1"
