@@ -10,7 +10,7 @@
     <h:body style="padding:20px">
     <h:form id="test">
     	<h:outputLabel value="#{jsfController.jsfTestString}"></h:outputLabel>
-    	<p:commandButton value="Ajax Submit" id="ajax" update="@form" actionListener="#{jsfController.doSomething}" styleClass="ui-priority-primary" />
+    	<p:commandButton value="Ajax Submit" id="ajax" update="@form" actionListener="#{jsfController.doSomething()}" styleClass="ui-priority-primary" />
     </h:form>
     <div width="100%">
         <p:chart type="line" model="#{jsfController.areaModel}" style="height:300px; width: 600px;" />
