@@ -27,8 +27,7 @@ dependencies {
     compile group: "com.sun.faces", name: "jsf-api", version: "2.2.7"
     compile group: "com.sun.faces", name: "jsf-impl", version: "2.2.7"
     compile group: 'javax.el', name: 'el-api', version: '1.0'
-    compile group: 'com.sun.el', name: 'el-ri', version: '1.0'
-    compile "javax.servlet.jsp:jsp-api:2.1"
+    compile "org.glassfish.web:el-impl:2.2"
     
     compile "org.apache.tomcat.embed:tomcat-embed-core:8.0.9"
     compile "org.apache.tomcat.embed:tomcat-embed-logging-juli:7.0.54"
